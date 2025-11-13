@@ -1,0 +1,141 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  gap: 16px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #d9dce5;
+  border-right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.input:focus,
+.input:focus-visible {
+  outline: none;
+  border-color: #d9dce5;
+  box-shadow: none;
+}
+
+.input::placeholder {
+    color: var(--muted);
+    opacity: 0.5; 
+}
+
+.searchBtn {
+  width: 40px;
+  border: 1px solid #d9dce5;
+  background: var(--lendsqr-teal);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.menuBtn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--lendsqr-blue);
+  padding: 0;
+  align-items: center;
+}
+
+.docs {
+  color: var(--lendsqr-blue);
+  text-decoration: underline;
+}
+
+.notif {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #EEF0F4;
+  display: inline-block;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  border-radius: 32px;
+}
+
+.username {
+  color: #213F7D;
+  font-weight: 600;
+}
+
+.iconBtn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  color: var(--lendsqr-blue);
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .container { gap: 12px; padding: 10px 14px; }
+  .left { gap: 10px; }
+  .search { max-width: none; }
+  .right { gap: 16px; }
+  .username { display: none; }
+}
+
+@media (max-width: 640px) {
+  .container { flex-wrap: wrap; gap: 10px; }
+  .left { order: 1; width: 100%; }
+  .brand { display: none; }
+  .search { width: 100%; margin: 0; }
+  .right { order: 2; width: 100%; justify-content: space-between; gap: 12px; }
+  .menuBtn { display: inline-flex; }
+  .docs { display: none; }
+  .input { border-top-left-radius: 8px; border-bottom-left-radius: 8px; }
+  .searchBtn { border-top-right-radius: 8px; border-bottom-right-radius: 8px; }
+}

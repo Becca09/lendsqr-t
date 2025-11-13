@@ -1,0 +1,167 @@
+@font-face {
+    font-family: "Avenir Next";
+    src: url("/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Avenir Next";
+    src: url("/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100dvh;
+    background: var(--bg);
+    font-family: "Avenir Next", Avenir, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    position: relative;
+    padding: 0;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--off-white-bg);
+    padding: 2rem clamp(2rem, 4vw, 3rem);
+    gap: 2rem;
+}
+
+.pageLogo {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 170px;
+    height: auto;
+    padding: 2rem;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem clamp(2rem, 6vw, 6rem);
+}
+
+.brand {
+    color: var(--brand-blue);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    margin-bottom: 2rem;
+}
+
+.card {
+    max-width: 480px;
+}
+
+.title {
+    color: var(--lendsqr-blue);
+    font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: var(--muted);
+    margin: 0 0 2rem;
+}
+
+.form {
+    display: grid;
+    gap: 1rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    font: inherit;
+}
+
+.input::placeholder {
+    color: var(--muted);
+    opacity: 0.5; 
+}
+
+.passwordWrap {
+    position: relative;
+}
+
+.showBtn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    color: var(--lendsqr-teal);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.forgot {
+    color: var(--lendsqr-teal);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.button {
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    color: white;
+    background: var(--lendsqr-teal);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.error {
+    color: red;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 1100px) {
+    .page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100dvh;
+    }
+
+
+    .left {
+        display: none;
+    }
+
+  .right {
+        width: 100%;
+        padding: 2rem;
+        display: block;
+    }
+
+    .card {
+        width: 100%;
+        max-width: none;
+    }
+
+}
+

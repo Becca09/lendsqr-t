@@ -1,5 +1,33 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Approach
+
+- **Routing & App Directory**: 
+Uses Next.js App Router with pages under `src/app` (`/login`, `/users`, `/users/[id]`).
+
+- **Authentication (lightweight)**: 
+Client-side check via `localStorage.auth === "1"`. The Login page sets this on successful login and redirects to `/users`.
+
+- **Data**:
+ Mock user data is deterministically generated and stored in `localStorage` using helpers in `src/lib/users.ts` (`seedUsers`, `getUsers`, `getUserById`). This keeps the app self-contained without a backend.
+
+- **State & UI**: 
+React client components with local state manage filters, pagination, and simple menus. Styles are authored in modular SCSS under `src/styles`.
+
+- **Testing**: 
+Jest + React Testing Library. `@testing-library/jest-dom` is configured in `jest.setup.ts`. Core flows are covered: Sidebar render, Login, Users list, and User Details.
+
+## User Login
+
+- **Credentials**:
+  - Email: `user@lendsqr.com`
+  - Password: `password`
+- **Flow**:
+  1. Open `/login`.
+  2. Enter the credentials above and click "LOG IN".
+  3. On success, `localStorage.auth` is set to `"1"` and you are redirected to `/users`.
+  4. Protected pages (`/users`, `/users/[id]`) check this flag and redirect to `/login` if missing.
+
 ## Getting Started
 
 First, run the development server:

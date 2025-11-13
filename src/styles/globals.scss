@@ -1,0 +1,57 @@
+$lendsqr-blue: #213F7D;
+$lendsqr-teal: #39CDCC;
+$orange: #F55F44;
+$green: #39CD62;
+$yellow: #F5CD5F;
+$red: #F55F44;
+$purple: #5718FF;
+$pink: #DF18FF;
+$muted: #545F7D;
+$bg: #ffffff;
+$border: rgba($muted, 0.15);
+$off-white-bg: #f9f9f9;
+
+:root {
+  --lendsqr-blue: #{$lendsqr-blue};
+  --lendsqr-teal: #{$lendsqr-teal};
+  --orange: #{$orange};
+  --green: #{$green};
+  --yellow: #{$yellow};
+  --red: #{$red};
+  --purple: #{$purple};
+  --pink: #{$pink};
+  --muted: #{$muted};
+  --border: #{$border};
+  --bg: #{$bg};
+  --off-white-bg: #{$off-white-bg};
+
+  --sb-width: 260px;
+  --sb-bg: #ffffff;
+  --sb-border: var(--border);
+
+  --blue: var(--lendsqr-blue);
+  --card-bg: var(--bg);
+  --accent: var(--lendsqr-teal);
+  --shadow: 0 10px 30px rgba(2, 8, 20, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--lendsqr-blue);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
